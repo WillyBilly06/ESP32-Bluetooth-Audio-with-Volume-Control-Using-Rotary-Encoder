@@ -1,7 +1,9 @@
 # ESP32-Bluetooth-Audio-with-Volume-Control-Using-Rotary-Encoder
 So I was just messing around with Phil Schatzmann's library and using Rotary Encoder which I accidently create a bluetooth device using Rotary Encoder to control the volume. The device's volume will also update when we rotate the Rotary Encoder.
 
-Also when the device is inactive for 5 minutes, it will go to deep sleep mode and to wake up the module, we need to pulldown PIN 15 of ESP32 to GND.
+Also when the device is inactive for 5 minutes, it will go to deep sleep mode and to wake up the module, we need to pulldown PIN 15 of ESP32 to GND. You can change the auto shutdown time by changing the value of minutes in the code. 
+
+The led built-in of the board will be lit up when your phone is connected to the bluetooth.
 
 # PCM5102A
 Here is the information of how to wire the PCM5102A module to the ESP32
