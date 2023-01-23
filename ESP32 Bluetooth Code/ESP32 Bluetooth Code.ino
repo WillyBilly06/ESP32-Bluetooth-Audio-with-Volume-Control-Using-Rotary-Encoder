@@ -128,7 +128,7 @@ void loop() {
       if (counter>127)
         counter=127;
     }
-a2dp_sink.set_volume(counter);  }
+a2dp_sink.set_volume(counter);  } // 127 for max volume, 0 for no volume
   // Remember last CLK state
   lastStateCLK = currentStateCLK;
   
@@ -141,7 +141,7 @@ a2dp_sink.set_volume(counter);  }
   // check state
   esp_a2d_connection_state_t state = a2dp_sink.get_connection_state();
   if (last_state != state){
-    bool is_connected = state == ESP_A2D_CONNECTION_STATE_CONNECTED;
+    bool is_connected = state == ESP_A2D_CONNECTION_STATE_CONNECTED; // reading connection state of the device
     Serial.println(is_connected ? "Connected" : "Not connected");    
     digitalWrite(LED_BUILTIN, is_connected);
     last_state = state;
