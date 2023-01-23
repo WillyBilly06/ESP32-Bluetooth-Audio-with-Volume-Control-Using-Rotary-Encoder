@@ -9,10 +9,11 @@ The led built-in of the board will be lit up when your phone is connected to the
 Here is the information of how to wire the PCM5102A module to the ESP32
 | PCM5102A  | ESP32 |
 |------|----------------|
-| LCK | GPIO 25  |
+| LCK | GPIO 25 |
 | DIN | GPIO 14 |
-| BCK | GPIO 26  |
-| GND | GND|
+| BCK | GPIO 26 |
+| SCK | GND |
+| GND | GND |
 | VIN | 3V3 OR 5V (VIN)|
 
 <img src="https://user-images.githubusercontent.com/72125448/213976186-991fbb73-26de-42e9-9aea-8901ce2a2613.jpg" width=50% height=50%>
