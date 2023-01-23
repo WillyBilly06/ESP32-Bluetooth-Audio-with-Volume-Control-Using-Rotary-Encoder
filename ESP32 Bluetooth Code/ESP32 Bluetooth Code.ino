@@ -60,7 +60,7 @@ void on_data() {
 
 void setup() {
   Serial.begin(115200);
-  // put your setup code here, to run once:
+
   i2s_install(); // install i2s profile
   i2s_pin(); // set i2s output pin
   i2s_start(I2S_PORT); //initialize i2s
@@ -128,7 +128,7 @@ void loop() {
       if (counter>127)
         counter=127;
     }
-a2dp_sink.set_volume(counter);  } // 127 for max volume, 0 for no volume
+a2dp_sink.set_volume(counter);  } // 127 for max volume, 0 to mute
   // Remember last CLK state
   lastStateCLK = currentStateCLK;
   
