@@ -1,3 +1,26 @@
+/*
+MIT License
+
+Copyright (c) 2023 BillyDaKidz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
 #include "BluetoothA2DPSink.h"
 
 BluetoothA2DPSink a2dp_sink;
@@ -14,7 +37,7 @@ int currentStateCLK;
 int lastStateCLK;
 
 esp_a2d_connection_state_t last_state;
-uint16_t minutes = 5;
+uint16_t minutes = 5; //countdown time
 unsigned long shutdown_ms = millis() + 1000 * 60 * minutes;
 
 // for esp_a2d_audio_state_t see https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/bluetooth/esp_a2dp.html#_CPPv421esp_a2d_audio_state_t
@@ -38,15 +61,16 @@ void on_data() {
 void setup() {
   Serial.begin(115200);
   // put your setup code here, to run once:
-  i2s_install();
-  i2s_pin();
-  i2s_start(I2S_PORT);
-  esp_sleep_enable_ext0_wakeup(GPIO_NUM_15,0); //1 = High, 0 = Low
+  i2s_install(); // install i2s profile
+  i2s_pin(); // set i2s output pin
+  i2s_start(I2S_PORT); //initialize i2s
+  
+  esp_sleep_enable_ext0_wakeup(GPIO_NUM_15,0); //1 = High, 0 = Low (Deep sleep wake up pin)
 
   a2dp_sink.set_on_data_received(on_data);
   a2dp_sink.set_on_volumechange(volumeChanged);
   a2dp_sink.set_on_audio_state_changed(audio_state_changed);
-  a2dp_sink.start("JBL Charge 5");
+  a2dp_sink.start("BDK Speaker"); // name of the device
   pinMode(CLK,INPUT);
   pinMode(DT,INPUT);
   pinMode(LED_BUILTIN, OUTPUT);
