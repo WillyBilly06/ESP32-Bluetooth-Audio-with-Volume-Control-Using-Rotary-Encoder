@@ -5,6 +5,8 @@ Also when the device is inactive for 5 minutes, it will go to deep sleep mode an
 
 It has only been tested on Android and IOS but not on computer. I am currently working on to make it work on 3 platforms.
 
+Updated: It works on Android, IOS, and Samsung Watch (Wear OS but not sure Tizen OS). 
+
 The built-in led of the board will be lit up when your phone is connected to the bluetooth.
 
 # PCM5102A
