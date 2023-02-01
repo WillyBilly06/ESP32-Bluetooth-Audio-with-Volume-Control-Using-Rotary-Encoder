@@ -3,6 +3,8 @@ So I was just messing around with Phil Schatzmann's library and using Rotary Enc
 
 Also when the device is inactive for 5 minutes, it will go to deep sleep mode and to wake up the module, we need to pulldown PIN 15 of ESP32 to GND. You can change the auto shutdown time by changing the value of minutes in the code. 
 
+It has only been tested on Android and IOS but not on computer. I am currently working on to make it work on 3 platforms.
+
 The built-in led of the board will be lit up when your phone is connected to the bluetooth.
 
 # PCM5102A
