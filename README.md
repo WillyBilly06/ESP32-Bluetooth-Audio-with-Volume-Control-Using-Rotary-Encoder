@@ -18,7 +18,7 @@ Here is the information of how to wire the PCM5102A module to the ESP32
 | GND | GND |
 | VIN | 3V3 OR 5V (VIN)|
 
-<img src="https://user-images.githubusercontent.com/72125448/213976186-991fbb73-26de-42e9-9aea-8901ce2a2613.jpg" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/72125448/213976186-991fbb73-26de-42e9-9aea-8901ce2a2613.jpg" width=45% height=45%>
 
 # Rotary Encoder
 Here is the information of how to wire the Rotary Encoder to the ESP32
