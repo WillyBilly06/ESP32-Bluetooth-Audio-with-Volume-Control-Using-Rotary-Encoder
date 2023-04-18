@@ -41,7 +41,7 @@ Here is the information of how to wire the WS2812B Led Strip to the ESP32
 <img src="https://user-images.githubusercontent.com/72125448/217063951-24d0d14b-80ca-4c57-81b6-0bb9044d79c7.jpg" width=45% height=45%>
 
 # Library Requirement
-https://github.com/pschatzmann/ESP32-A2DP
+https://github.com/pschatzmann/ESP32-A2DP <br />
 https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-installation
 # LICENSE
 MIT LICENSED
