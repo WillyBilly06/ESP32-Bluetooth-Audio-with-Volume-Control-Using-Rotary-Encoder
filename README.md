@@ -34,6 +34,7 @@ Here is the information on how to wire the Rotary Encoder to the ESP32:
 # WS2812B Led Strip
 Here is the information on how to wire the WS2812B Led Strip to the ESP32:
 | WS2812B | ESP32 |
+|------|----------------|
 | V+ | VIN (5V) or 3.3V |
 | Data In | GPIO 18 |
 | GND | GND |
