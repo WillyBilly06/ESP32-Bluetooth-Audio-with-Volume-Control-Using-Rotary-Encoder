@@ -39,6 +39,12 @@ Here is the information on how to wire the WS2812B Led Strip to the ESP32:
 | Data In | GPIO 18 |
 | GND | GND |
 
+| WS2812B  | ESP32 |
+| ------ | ----------------|
+| Data In | GPIO 18 |
+| V+ | VIN (5V) or 3.3V |
+| GND | GND |
+
 <img src="https://user-images.githubusercontent.com/72125448/217063951-24d0d14b-80ca-4c57-81b6-0bb9044d79c7.jpg" width=45% height=45%>
 
 # Library Requirements
