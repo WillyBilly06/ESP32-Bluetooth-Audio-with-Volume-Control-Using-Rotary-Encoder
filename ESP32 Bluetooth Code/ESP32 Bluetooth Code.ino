@@ -30,6 +30,9 @@ Adafruit Neopixels Library: https://learn.adafruit.com/adafruit-neopixel-ubergui
 */
 #include "BluetoothA2DPSink.h"
 #include <Adafruit_NeoPixel.h>
+#include "AiEsp32RotaryEncoder.h"
+#include "EEPROM.h"
+
 
 BluetoothA2DPSink a2dp_sink;
 #define I2S_PORT I2S_NUM_0
