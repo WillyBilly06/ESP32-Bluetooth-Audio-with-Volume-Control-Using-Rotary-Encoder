@@ -37,7 +37,7 @@ Adafruit Neopixels Library: https://learn.adafruit.com/adafruit-neopixel-ubergui
 BluetoothA2DPSink a2dp_sink;
 #define I2S_PORT I2S_NUM_0
 
-#define PIN 18
+#define VOLUME 18
 
 #define CLK 33 // You can change the pin numbers depend on your project
 #define DT 32      
@@ -71,7 +71,7 @@ void on_data() {
   shutdown_ms = millis() + 1000 * 60 * minutes; 
 }
 
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel pixels(NUMPIXELS, VOLUME, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   Serial.begin(115200);
